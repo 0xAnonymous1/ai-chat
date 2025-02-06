@@ -30,7 +30,7 @@ const Hero = () => {
             <h1 className="font-bold text-2xl md:text-3xl lg:text-5xl  text-white">
               Hello World!
             </h1>
-            <div className="text-white space-y-2 lg:space-y-4 xl:space-y-6 lg:text-2xl 2xl:text-3xl  ">
+            <div className="text-white space-y-2 lg:space-y-4 xl:space-y-6 xl:text-2xl 2xl:text-3xl  ">
               <p className="">
                 Hello I’m <span className="font-semibold">Amy Wilkinson</span>,
                 an inspiring consultant and <br />
