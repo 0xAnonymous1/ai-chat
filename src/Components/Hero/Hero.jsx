@@ -13,7 +13,7 @@ const Hero = () => {
       <div className=" w-full md:w-[95%] lg:w-[90%] xl:w-[75%] 2xl:w-[70%]  mx-auto pb-[32px] pt-[26px] px-4 md:rounded-[50px] border-[0.5px] border-[#CCCCCC]  backdrop-blur-xl ">
         <div className="flex justify-between px-0 md:px-6 lg:px-8 items-center">
           <img src={Logo} alt="" className="w-8" />
-          <div>
+          <div >
             {" "}
             <LanguageSelector />
           </div>
@@ -27,10 +27,10 @@ const Hero = () => {
                 className="w-44 h-44 md:mt-0 mt-4 rounded-full xl:h-96 border-red-700 border-4  "
               />
             </div>
-            <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl  text-white text-center md:text-start">
+            <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl  text-white text-center xl:text-start">
               Hello World!
             </h1>
-            <div className="text-white space-y-2 lg:space-y-2 xl:space-y-6 xl:text-lg 2xl:text-xl text-center md:text-start  ">
+            <div className="text-white space-y-2 lg:space-y-2 xl:space-y-6 xl:text-lg 2xl:text-xl text-center xl:text-start  ">
               <p className="">
                 Hello I’m <span className="font-semibold">Amy Wilkinson</span>,
                 an inspiring consultant and <br />
