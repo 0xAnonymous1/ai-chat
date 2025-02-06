@@ -22,8 +22,8 @@ export default function LanguageSelector() {
   };
 
   return (
-    <div className="relative inline-block text-white">
-      <div className="flex items-center space-x-7 border py-2 px-2 min-w-44 rounded-full text-lg cursor-pointer" onClick={toggleDropdown}>
+    <div className="relative inline-block text-white ">
+      <div className="flex items-center space-x-7 border py-2 px-2 min-w-44 rounded-full text-lg cursor-pointer bg-white/15" onClick={toggleDropdown}>
         <img src={selectedLanguage.flag} alt={selectedLanguage.name} className="w-12 h-12 rounded-full border" />
         <h1>{selectedLanguage.name}</h1>
         <img className={`transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} src={arrow} alt="arrow" />
