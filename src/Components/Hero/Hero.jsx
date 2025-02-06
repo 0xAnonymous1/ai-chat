@@ -46,13 +46,14 @@ const Hero = () => {
                 better discover and engage.
               </p>
             </div>
-
-            <button className="w-fit  rounded-full bg-white/15 py-2 px-14 hover:cursor-pointer font-semibold md:text-lg text-xs text-white flex items-center gap-4 ">
+          <div className="flex justify-center xl:justify-start" > <button className="w-fit  rounded-full bg-white/15 py-1 px-14 hover:cursor-pointer font-semibold md:text-lg text-xs text-white flex items-center gap-2">
               <span>
                 <img src={google} alt="" className="w-8" />
               </span>{" "}
               Sign Up With Google
-            </button>
+            </button></div>
+
+           
           </div>
           <div className="  lg:w-[100%] xl:w-[70%] 2xl:w-[50%] flex flex-col justify-between ">
             <div className=" w-fit mx-auto xl:block hidden ">
@@ -63,7 +64,7 @@ const Hero = () => {
               />
             </div>
 
-            <div className="flex md:flex-row flex-col items-center gap-2 justify-start xl:justify-center mt-4 md:mt-0">
+            <div className="flex md:flex-row flex-col items-center gap-2 justify-start xl:justify-center mt-4 xl:mt-0">
               <button className="py-2 w-full px-2 font-light xl:w-fit hover:cursor-pointer rounded-full bg-white/10 text-xs md:text-sm 2xl:text-lg   text-white flex items-center gap-0 2xl:gap-4 justify-around ">
                 <span>
                   <img src={not} alt="wait"  className="w-6" />

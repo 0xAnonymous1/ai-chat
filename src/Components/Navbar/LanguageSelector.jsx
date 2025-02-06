@@ -29,7 +29,7 @@ export default function LanguageSelector() {
         <img className={`transition-transform w-10 ${dropdownOpen ? 'rotate-180' : ''}`} src={arrow} alt="arrow" />
       </div>
       {dropdownOpen && (
-        <ul className="absolute md:-left-40 mt-2 -left-0 md:min-w-72 lg:min-w-96 bg-black/70 backdrop-blur-md rounded-[30px] shadow-lg overflow-hidden z-10 border-[0.5px] border-[#CCCCCC] grid grid-cols-2 md:grid-cols-3 gap-4 p-4 ">
+        <ul className="absolute md:-left-40 mt-2  md:min-w-72 lg:min-w-80 bg-black/70 backdrop-blur-md rounded-[30px] shadow-lg overflow-hidden z-10 border-[0.5px] border-[#CCCCCC] grid grid-cols-2 md:grid-cols-3 gap-4 p-4 ">
           {languages.map((language) => (
             <div key={language.code} className=" rounded-[20px] flex items-center justify-center p-2 bg-white/10 ">
               <li
