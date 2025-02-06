@@ -10,7 +10,7 @@ import LanguageSelector from "../Navbar/LanguageSelector";
 const Hero = () => {
   return (
     <div className='bgimg h-auto md:min-h-screen bg-no-repeat bg-cover  flex items-center md:py-6 '>
-      <div className=" w-full md:w-[75%]   mx-auto pb-12 pt-10 px-4 rounded-none lg:rounded-4xl border-[0.5px] border-[#CCCCCC]  backdrop-blur-xl ">
+      <div className=" w-full md:w-[75%]   mx-auto pb-12 pt-10 px-4 md:rounded-[50px] border-[0.5px] border-[#CCCCCC]  backdrop-blur-xl ">
         <div className="flex justify-between px-0 md:px-6 lg:px-8 items-center">
           <img src={Logo} alt="" />
           <div>
