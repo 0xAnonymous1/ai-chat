@@ -33,10 +33,10 @@ const Hero = () => {
             <div className="text-white space-y-2 lg:space-y-4 xl:space-y-6 lg:text-2xl 2xl:text-3xl  ">
               <p className="">
                 Hello I’m <span className="font-semibold">Amy Wilkinson</span>,
-                an inspiring consultant and 
-                teacher to Fortune 500 companies, known for your 
-                expertise in leadership, innovation, and the principles 
-                outlined in your book, The Creator’s Code: The Six 
+                an inspiring consultant and <br />
+                teacher to Fortune 500 companies, known for your <br />
+                expertise in leadership, innovation, and the principles <br />
+                outlined in your book, The Creator’s Code: The Six <br />
                 Essential Skills of Extraordinary
               </p>
               <p className="font-light">
@@ -47,7 +47,7 @@ const Hero = () => {
               </p>
             </div>
 
-            <button className="w-fit rounded-full bg-white/15 py-2 px-14 hover:cursor-pointer font-semibold md:text-xl text-xs text-white flex items-center gap-4">
+            <button className="w-fit  rounded-full bg-white/15 py-2 px-14 hover:cursor-pointer font-semibold md:text-xl text-xs text-white flex items-center gap-4 ">
               <span>
                 <img src={google} alt="" />
               </span>{" "}
@@ -63,7 +63,7 @@ const Hero = () => {
               />
             </div>
 
-            <div className="flex items-center gap-2 ">
+            <div className="flex items-center gap-2 justify-start xl:justify-center ">
               <button className="py-2 px-2 font-light w-fit hover:cursor-pointer rounded-full bg-white/10 text-xs md:text-sm 2xl:text-lg   text-white flex items-center gap-2 2xl:gap-4">
                 <span>
                   <img src={not} alt="wait"  />
