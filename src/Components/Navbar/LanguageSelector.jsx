@@ -23,20 +23,20 @@ export default function LanguageSelector() {
 
   return (
     <div className="relative inline-block text-white ">
-      <div className="flex items-center space-x-7 border py-2 px-2 min-w-44 rounded-full text-lg cursor-pointer bg-white/15" onClick={toggleDropdown}>
+      <div className="flex items-center space-x-7  py-2 px-2 min-w-44 rounded-full text-lg cursor-pointer bg-white/15" onClick={toggleDropdown}>
         <img src={selectedLanguage.flag} alt={selectedLanguage.name} className="w-12 h-12 rounded-full border" />
         <h1>{selectedLanguage.name}</h1>
         <img className={`transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} src={arrow} alt="arrow" />
       </div>
       {dropdownOpen && (
-        <ul className="absolute -left-40 mt-2 min-w-96 bg-black/70 backdrop-blur-md rounded-lg shadow-lg overflow-hidden z-10 grid grid-cols-3 gap-4 p-4 ">
+        <ul className="absolute md:-left-40 mt-2 -left-0 md:min-w-72 lg:min-w-96 bg-black/70 backdrop-blur-md rounded-lg shadow-lg overflow-hidden z-10 grid grid-cols-3 gap-4 p-4 ">
           {languages.map((language) => (
             <div key={language.code} className=" rounded-md flex items-center justify-center p-2 bg-white/10 ">
               <li
                 className={`cursor-pointer ${language.name === "Coming Soon" ? 'opacity-50 text-center cursor-not-allowed' : (language.code === selectedLanguage.code ? 'opacity-70' : 'opacity-100 hover:opacity-100')}`}
                 onClick={() => selectLanguage(language)}
               >
-                <img src={language.flag} alt={language.name} className="w-14 h-14 rounded-full mx-auto " />
+                <img src={language.flag} alt={language.name} className="md:w-14 w-6 md:h-14 h-6 rounded-full mx-auto " />
                 <span>{language.name}</span>
               </li>
             </div>
