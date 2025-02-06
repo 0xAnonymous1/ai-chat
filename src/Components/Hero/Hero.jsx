@@ -10,27 +10,27 @@ import LanguageSelector from "../Navbar/LanguageSelector";
 const Hero = () => {
   return (
     <div className='bgimg h-auto md:min-h-screen bg-no-repeat bg-cover  flex items-center md:py-6 '>
-      <div className=" w-full md:w-[95%] lg:w-[90%] xl:w-[75%] 2xl:w-[70%]  mx-auto pb-12 pt-10 px-4 md:rounded-[50px] border-[0.5px] border-[#CCCCCC]  backdrop-blur-xl ">
+      <div className=" w-full md:w-[95%] lg:w-[90%] xl:w-[75%] 2xl:w-[70%]  mx-auto pb-[32px] pt-[26px] px-4 md:rounded-[50px] border-[0.5px] border-[#CCCCCC]  backdrop-blur-xl ">
         <div className="flex justify-between px-0 md:px-6 lg:px-8 items-center">
-          <img src={Logo} alt="" />
+          <img src={Logo} alt="" className="w-8" />
           <div>
             {" "}
             <LanguageSelector />
           </div>
         </div>
-        <div className="flex xl:flex-row flex-col  gap-6 p-4 md:p-8 h-[100%] lg:h-[80%] mx-auto ">
+        <div className="flex xl:flex-row flex-col  gap-6 px-2 md:pt-8 pb-0 h-[100%] lg:h-[80%] mx-auto ">
           <div className=" w-[95%]  space-y-6  pb-0">
           <div className=" w-fit mx-auto xl:hidden block">
               <img
                 src={profile}
                 alt="profile"
-                className="w-96 rounded-full xl:h-96 border-red-700 border-4  "
+                className="w-44 h-44 md:mt-0 mt-4 rounded-full xl:h-96 border-red-700 border-4  "
               />
             </div>
-            <h1 className="font-bold text-2xl md:text-3xl lg:text-5xl  text-white">
+            <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl  text-white text-center md:text-start">
               Hello World!
             </h1>
-            <div className="text-white space-y-2 lg:space-y-4 xl:space-y-6 xl:text-2xl 2xl:text-3xl  ">
+            <div className="text-white space-y-2 lg:space-y-2 xl:space-y-6 xl:text-lg 2xl:text-xl text-center md:text-start  ">
               <p className="">
                 Hello I’m <span className="font-semibold">Amy Wilkinson</span>,
                 an inspiring consultant and <br />
@@ -47,9 +47,9 @@ const Hero = () => {
               </p>
             </div>
 
-            <button className="w-fit  rounded-full bg-white/15 py-2 px-14 hover:cursor-pointer font-semibold md:text-xl text-xs text-white flex items-center gap-4 ">
+            <button className="w-fit  rounded-full bg-white/15 py-2 px-14 hover:cursor-pointer font-semibold md:text-lg text-xs text-white flex items-center gap-4 ">
               <span>
-                <img src={google} alt="" />
+                <img src={google} alt="" className="w-8" />
               </span>{" "}
               Sign Up With Google
             </button>
@@ -59,21 +59,21 @@ const Hero = () => {
               <img
                 src={profile}
                 alt="profile"
-                className="w-96 rounded-full xl:h-96 border-red-700 border-4  "
+                className="w-72 rounded-full h-72 border-red-700 border-4  "
               />
             </div>
 
-            <div className="flex items-center gap-2 justify-start xl:justify-center ">
-              <button className="py-2 px-2 font-light w-fit hover:cursor-pointer rounded-full bg-white/10 text-xs md:text-sm 2xl:text-lg   text-white flex items-center gap-2 2xl:gap-4">
+            <div className="flex md:flex-row flex-col items-center gap-2 justify-start xl:justify-center mt-4 md:mt-0">
+              <button className="py-2 w-full px-2 font-light xl:w-fit hover:cursor-pointer rounded-full bg-white/10 text-xs md:text-sm 2xl:text-lg   text-white flex items-center gap-0 2xl:gap-4 justify-around ">
                 <span>
-                  <img src={not} alt="wait"  />
+                  <img src={not} alt="wait"  className="w-6" />
                 </span>{" "}
                 Early Access Beta
               </button>
 
-              <button className="w-fit rounded-full bg-white/10 py-2 px-2 hover:cursor-pointer md:font-light text-xs md:text-sm 2xl:text-lg  text-white flex items-center gap-2 2xl:gap-4">
+              <button className="w-full xl:w-fit rounded-full bg-white/10 py-2 px-2 hover:cursor-pointer md:font-light text-xs md:text-sm 2xl:text-lg  text-white flex items-center gap-0 2xl:gap-4 justify-around">
                 <span>
-                  <img src={copy} alt="copyrite" />
+                  <img src={copy} alt="copyrite" className="w-6" />
                 </span>{" "}
                 Hypermatter Alpha
               </button>
