@@ -12,7 +12,7 @@ const VideoCall = () => {
 <video src={videofile} />
       
       {/* Controls overlay */}
-      <div className="absolute bottom-6 left-6 flex justify-center gap-4  bg-black/15 backdrop-blur-3xl px-8 py-4 rounded-[30px]">
+      <div className="absolute bottom-6 left-1 md:left-0 xl:left-12 flex justify-center gap-4  bg-black/15 backdrop-blur-3xl px-8 py-4 rounded-[30px]">
       
           <img src='https://img.freepik.com/free-psd/3d-render-young-businesswoman-with-long-brown-hair-wearing-light-blue-blazer-white-shirt-she-looks-friendly-approachable-perfect-avatar-professional-woman_632498-32059.jpg' className="w-16 hover:cursor-pointer rounded-full " />
        
