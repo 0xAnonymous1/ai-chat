@@ -50,11 +50,11 @@ const Chat = () => {
   return (
     <div className="bgimg min-h-screen bg-no-repeat bg-cover bg-center flex items-center flex-col gap-2 justify-center  ">
       <Navbar/>
-      <div className="p-[5px] mx-auto md:rounded-[50px] border-[0.5px] border-[#CCCCCC] backdrop-blur-xl lg:w-[70%] w-full overflow-hidden">
+      <div className="p-[5px] mx-auto md:rounded-[50px] border-[0.5px] border-[#7F7F7F] backdrop-blur-xl lg:w-[70%] w-full overflow-hidden">
         <div className="flex flex-col justify-between ">
           <div className="flex md:flex-row flex-col gap-2 mx-auto  2xl:min-h-[500px] w-[100%]">
             <Videocal/>
-            <div className="md:w-full lg:max-w-[450px] lg:min-w-[450px] xl:max-w-[600px] xl:min-w-[600px] 2xl:min-w-[1000px]  border-[#CCCCCC] border-[0.5px] rounded-[40px] xl:space-y-4 ">
+            <div className="md:w-full lg:max-w-[450px] lg:min-w-[450px] xl:max-w-[600px] xl:min-w-[600px] 2xl:min-w-[1000px]  border-[#7F7F7F] border-[0.5px] rounded-[40px] xl:space-y-4 ">
               <div className="backdrop-blur-2xl p-2 text-white xl:space-y-8 flex flex-col items-center w-full   ">
                 <img src={Logo} alt="logo" className="w-10 mx-auto mb-4" />
                 

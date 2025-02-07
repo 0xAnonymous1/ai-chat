@@ -22,14 +22,14 @@ export default function LanguageSelector() {
   };
 
   return (
-    <div className="relative inline-block text-white ">
+    <div className="relative inline-block text-white z-50 ">
       <div className="flex items-center space-x-4  py-1 px-1 min-w-40 rounded-full text-lg cursor-pointer bg-white/15" onClick={toggleDropdown}>
         <img src={selectedLanguage.flag} alt={selectedLanguage.name} className="w-8 h-8 rounded-full border" />
         <h1>{selectedLanguage.name}</h1>
         <img className={`transition-transform w-10 ${dropdownOpen ? 'rotate-180' : ''}`} src={arrow} alt="arrow" />
       </div>
       {dropdownOpen && (
-        <ul className="absolute md:-left-40 mt-2  md:min-w-72 lg:min-w-80 bg-black/70 backdrop-blur-md rounded-[30px] shadow-lg overflow-hidden z-10 border-[0.5px] border-[#CCCCCC] grid grid-cols-2 md:grid-cols-3 gap-4 p-4 ">
+        <ul className="absolute md:-left-40 mt-2  md:min-w-72 lg:min-w-80 bg-black/70 backdrop-blur-md rounded-[30px] shadow-lg overflow-hidden z-10 border-[0.5px] border-[#7F7F7F] grid grid-cols-2 md:grid-cols-3 gap-4 p-4 ">
           {languages.map((language) => (
             <div key={language.code} className=" rounded-[20px] flex items-center justify-center p-2 bg-white/10 ">
               <li
