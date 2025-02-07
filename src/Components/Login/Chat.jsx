@@ -60,21 +60,21 @@ const Chat = () => {
   return (
     <div className="bgimg min-h-screen bg-no-repeat bg-cover bg-center flex items-center flex-col gap-2 justify-center   ">
       <Navbar/>
-      <div className="p-[5px] mx-auto md:rounded-[50px] border-[0.5px] border-[#7F7F7F] lg:w-[70%] backdrop-blur-2xl  w-full overflow-hidden ">
+      <div className="p-[5px] mx-auto rounded-xl md:rounded-[50px] border-[0.5px] border-[#7F7F7F] md:w-[90%] lg:w-[80%] backdrop-blur-2xl  w-full overflow-hidden ">
         <div className="flex flex-col justify-between  ">
-          <div className="flex md:flex-row flex-col gap-2 mx-auto  2xl:min-h-[500px] w-[100%] ">
+          <div className="flex md:flex-row flex-col gap-2 mx-auto  2xl:min-h-[500px] w-full ">
             <Videocal/>
-            <div className="md:w-full lg:max-w-[450px] lg:min-w-[450px] xl:max-w-[600px] xl:min-w-[600px] 2xl:min-w-[1000px] bg-gradient-to-br from-[#202020]/10 to-[#ffffff]/10  border-[#7F7F7F] border-[0.5px] rounded-[50px] xl:space-y-4 ">
-              <div className=" relative p-2 text-white xl:space-y-8 flex flex-col items-center w-full bg-white/5 h-full rounded-[50px] justify-around  ">
+            <div className="md:w-full lg:max-w-[450px] lg:min-w-[450px] xl:max-w-[600px] xl:min-w-[600px] 2xl:min-w-[1000px] bg-gradient-to-br from-[#202020]/10 to-[#ffffff]/10  border-[#7F7F7F] border-[0.5px] rounded-[20px] md:rounded-[50px] xl:space-y-4 ">
                 {isGreeting||(
               <div>
                 <img src={Logo} alt="logo" className="absolute top-4 left-8 w-4 " />
               </div>
                 )}
+              <div className=" relative p-2 border text-white xl:space-y-8 flex flex-col items-center w-full  h-full rounded-[20px] md:rounded-[50px] justify-around   ">
                 
                 {isGreeting && (
                   
-                  <div className="text-center text-lg text-white border h-full flex flex-col justify-end">
+                  <div className="text-center text-lg text-white  h-full flex flex-col justify-end">
                     <img src={Logo} alt="logo" className="w-10 mx-auto mb-4" />
                     <p className="font-bold">Hello Karim!</p>
                     <p>How can I help you today?</p>
@@ -83,7 +83,7 @@ const Chat = () => {
                         <button
                           key={index}
                           onClick={() => handleSendMessage(suggestion)}
-                          className="px-4 py-2 bg-gray-700 text-white rounded-lg text-sm hover:bg-gray-600 transition"
+                          className="px-4 py-2 bg-white/15 text-white rounded-full text-sm hover:bg-white/25 "
                         >
                           {suggestion}
                         </button>
@@ -94,10 +94,10 @@ const Chat = () => {
 
 
 
-                <div className="w-full text-left overflow-y-auto max-h-72 2xl:max-w-[80] space-y-4">
+                <div className="w-full flex flex-col text-left overflow-y-auto max-h-full 2xl:max-w-full h-full p-1 space-y-4">
                   {messages.map((msg, index) => (
                     <div key={index} className={`flex flex-col ${msg.sender === "user" ? "items-end" : "items-start"}`}>
-                      <div className="flex  justify-center">
+                      <div className="flex relative ">
                         {msg.sender === "bot" && (
                           <img src="https://i.pravatar.cc/40?img=10" alt="Bot" className="w-8 h-8 rounded-full mr-2" />
                         )} 
@@ -106,22 +106,23 @@ const Chat = () => {
                         </div>
                         {msg.sender === "user" && (
                           <img src="https://i.pravatar.cc/40?img=5" alt="User" className="w-8 h-8 rounded-full ml-2" />
-                        )}
-                      </div>
-                      {msg.sender === "bot" && (
+                        )} 
+                        <div className="absolute top-14 left-8">
+                        {msg.sender === "bot" && (
                         <div className="flex gap-2 mt-2 ml-16">
-                          <button className="text-white px-3  hover:cursor-pointer text-xs bg-white/15 py-1 rounded-full  flex items-center gap-1 transition" onClick={() => alert("Translate feature coming soon!")}> 
-                            <Languages size={16} /><h1 className="md:block hidden"> Translate</h1>
+                          <button className="text-white px-3  hover:cursor-pointer  bg-white/15 min-w-20 justify-center rounded-full  flex items-center gap-1 " onClick={() => alert("Translate feature coming soon!")}> 
+                            <Languages size={16} /><h1 className="md:block hidden text-[10px]"> Translate</h1>
                           </button>
-                          <button className="text-white hover:cursor-pointer text-xs bg-white/15 px-3 py-1 rounded-full  flex items-center gap-1  transition" onClick={() => handleCopyText(msg.text)}> 
-                            <Copy size={16} /><h1 className="md:block hidden"> Copy Text</h1>
+                          <button className="text-white hover:cursor-pointer  bg-white/15 min-w-20 justify-center rounded-full  flex items-center gap-1  " onClick={() => handleCopyText(msg.text)}> 
+                            <Copy size={16} /><h1 className="md:block hidden text-[10px]"> Copy Text</h1>
                           </button>
-                          <button className="text-white hover:cursor-pointer text-xs bg-white/15  px-3 py-1 rounded-full  flex items-center gap-1  transition" onClick={() => alert("Learn More feature coming soon!")}> 
+                          <button className="text-white hover:cursor-pointer  bg-white/15 min-w-20  px-4  rounded-full  flex items-center gap-1 " onClick={() => alert("Learn More feature coming soon!")}> 
                             <BookOpenText size={16} />
-                            <h1 className="md:block hidden">Learn More</h1> 
+                            <h1 className="md:block hidden text-[10px]">Learn More</h1> 
                           </button>
                         </div>
-                      )}
+                      )}</div>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -135,13 +136,13 @@ const Chat = () => {
                     rows={2}
                     className="w-full min-h-[130px] max-h-[150px] bg-white/15 rounded-[24px] pl-4 pr-20 py-2 focus:outline-none resize-none overflow-auto break-words"
                   />
-                  <button onClick={handleSendMessage} className="absolute right-4 bottom-2 p-2 hover:bg-white/15 rounded-full transition-colors">
+                  <button onClick={handleSendMessage} className="absolute right-4 bottom-2 p-2 hover:bg-white/15 rounded-full ">
                     <img src={send} className="w-10 h-10" alt="send" />
                   </button>
-                  <button onClick={handleSendMessage} className="absolute right-16 bottom-2 p-2 hover:bg-white/15 rounded-full transition-colors">
+                  <button onClick={handleSendMessage} className="absolute right-16 bottom-2 p-2 hover:bg-white/15 rounded-full ">
                     <img src={micro} className="w-10 h-10" alt="send" />
                   </button>
-                  <button className="absolute left-2 bottom-2 p-2 hover:bg-white/15 rounded-full transition-colors"> 
+                  <button className="absolute left-2 bottom-2 p-2 hover:bg-white/15 rounded-full "> 
                     <img src={attach} className="w-10 h-10" alt="attach" />
                   </button>
                 </div>

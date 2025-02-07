@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <div className='bgimg h-auto md:min-h-screen bg-no-repeat bg-cover  flex items-center md:py-6 '>
-      <div className=" w-full md:w-[95%] lg:w-[90%] xl:w-[75%] 2xl:w-[70%]  mx-auto pb-[32px] pt-[26px] px-4 md:rounded-[50px] border-[0.5px] border-[#CCCCCC]  backdrop-blur-xl ">
+      <div className=" w-full md:w-[95%] lg:w-[90%] xl:w-[75%] 2xl:w-[70%]  mx-auto pb-[32px] pt-[26px] px-4 md:rounded-[50px] border-[0.5px] border-[#7f7f7f]  backdrop-blur-xl ">
         <div className="flex justify-between px-0 md:px-6 lg:px-8 items-center">
           <img src={Logo} alt="" className="w-8" />
           <div >
@@ -39,7 +39,7 @@ const Hero = () => {
                 outlined in your book, The Creator’s Code: The Six <br />
                 Essential Skills of Extraordinary
               </p>
-              <p className="font-light">
+              <p className="">
                 I help companies streamline and grow their business by building
                 conversational AI solutions to better discover and engage with
                 al AI solutions to better discover and engage al AI solutions to
@@ -47,7 +47,7 @@ const Hero = () => {
               </p>
             </div>
           <div className="flex justify-center xl:justify-start" >
-            <Link to="/google"> <button className="w-fit  rounded-full bg-white/15 py-1 px-14 hover:cursor-pointer font-semibold md:text-lg text-xs text-white flex items-center gap-2">
+            <Link > <button className="w-fit  rounded-full bg-white/15 py-1 px-14 hover:cursor-pointer font-semibold md:text-lg text-xs text-white flex items-center gap-2">
               <span>
                 <img src={google} alt="" className="w-8" />
               </span>{" "}
