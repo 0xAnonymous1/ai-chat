@@ -4,8 +4,8 @@ import google from "./images/google.svg";
 import profile from "./images/profile.jpg";
 import not from "./images/not.svg";
 import copy from "./images/copy.svg";
-
 import LanguageSelector from "../Navbar/LanguageSelector";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -46,12 +46,13 @@ const Hero = () => {
                 better discover and engage.
               </p>
             </div>
-          <div className="flex justify-center xl:justify-start" > <button className="w-fit  rounded-full bg-white/15 py-1 px-14 hover:cursor-pointer font-semibold md:text-lg text-xs text-white flex items-center gap-2">
+          <div className="flex justify-center xl:justify-start" >
+            <Link to="/google"> <button className="w-fit  rounded-full bg-white/15 py-1 px-14 hover:cursor-pointer font-semibold md:text-lg text-xs text-white flex items-center gap-2">
               <span>
                 <img src={google} alt="" className="w-8" />
               </span>{" "}
               Sign Up With Google
-            </button></div>
+            </button></Link></div>
 
            
           </div>
@@ -82,6 +83,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

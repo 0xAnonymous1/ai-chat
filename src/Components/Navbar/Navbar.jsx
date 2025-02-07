@@ -7,7 +7,7 @@ const Navbar = ({ Buttons }) => {
       <img src={Logo} alt="logo" className="w-[50px] h-[60px]" />
       <div className="flex gap-2 border rounded-full">
        
-       <button>{Buttons}</button> 
+       <button></button> 
       </div>
     </div>
   );
