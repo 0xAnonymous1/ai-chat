@@ -2,10 +2,10 @@ import { useState } from "react";
 import arrow from "../Hero/images/arrow.svg";
 
 const languages = [
-  { code: "en", name: "English", flag: "https://en.wikipedia.org/wiki/Flag_of_the_United_Kingdom#/media/File:Flag_of_the_United_Kingdom_(1-2).svg" },
+  { code: "en", name: "English", flag: "https://images.pexels.com/photos/4386429/pexels-photo-4386429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
   { code: "es", name: "Espanol", flag: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" },
   { code: "fr", name: "Coming Soon", flag: "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" },
-  { code: "cn", name: "Coming Soon", flag: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_China.svg" },
+  { code: "cn", name: "Coming Soon", flag: "https://img.freepik.com/premium-photo/italy-rippled-country-flag_764664-16003.jpg?w=826" },
   { code: "jp", name: "Coming Soon", flag: "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" },
 ];
 
@@ -24,7 +24,7 @@ export default function LanguageSelector() {
   return (
     <div className="relative inline-block text-white z-50 ">
       <div className="flex items-center space-x-4  py-1 px-1 min-w-40 rounded-full text-lg cursor-pointer bg-white/15" onClick={toggleDropdown}>
-        <img src={selectedLanguage.flag} alt={selectedLanguage.name} className="w-8 h-8 rounded-full border" />
+        <img src={selectedLanguage.flag} alt={selectedLanguage.name} className="w-8 h-8 rounded-full " />
         <h1>{selectedLanguage.name}</h1>
         <img className={`transition-transform w-10 ${dropdownOpen ? 'rotate-180' : ''}`} src={arrow} alt="arrow" />
       </div>
