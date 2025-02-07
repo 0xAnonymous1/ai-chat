@@ -1,13 +1,14 @@
 import React from "react";
 import Logo from "./images/Logo.svg";
+import Language from './LanguageSelector'
 
-const Navbar = ({ Buttons }) => {
+const Navbar = () => {
   return (
-    <div className="flex justify-between w-[95%] mx-auto px-2 py-4 rounded-2xl ">
+    <div className="w-full mt-4 md:w-[95%] lg:w-[70%]  2xl:w-[70%]  mx-auto  px-4 md:rounded-[50px] border-[0.5px] border-[#CCCCCC] flex justify-between backdrop-blur-xl p-1 items-center ">
       <img src={Logo} alt="logo" className="w-[50px] h-[60px]" />
-      <div className="flex gap-2 border rounded-full">
-       
-       <button></button> 
+      <div className="flex gap-2  rounded-full">
+      <Language/>
+      <button className="bg-red-500 rounded-full w-32">Sign out</button>
       </div>
     </div>
   );
