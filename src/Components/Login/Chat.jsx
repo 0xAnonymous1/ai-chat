@@ -60,17 +60,24 @@ const Chat = () => {
   return (
     <div className="bgimg min-h-screen bg-no-repeat bg-cover bg-center flex items-center flex-col gap-2 justify-center   ">
       <Navbar/>
-      <div className="p-[5px] mx-auto md:rounded-[50px] border-[0.5px] border-[#7F7F7F] backdrop-blur-xs lg:w-[70%] w-full overflow-hidden ">
-        <div className="flex flex-col justify-between ">
-          <div className="flex md:flex-row flex-col gap-2 mx-auto  2xl:min-h-[500px] w-[100%] backdrop-blur-3xl ">
+      <div className="p-[5px] mx-auto md:rounded-[50px] border-[0.5px] border-[#7F7F7F] lg:w-[70%] backdrop-blur-2xl  w-full overflow-hidden ">
+        <div className="flex flex-col justify-between  ">
+          <div className="flex md:flex-row flex-col gap-2 mx-auto  2xl:min-h-[500px] w-[100%] ">
             <Videocal/>
-            <div className="md:w-full lg:max-w-[450px] lg:min-w-[450px] xl:max-w-[600px] xl:min-w-[600px] 2xl:min-w-[1000px] bg-gradient-to-br from-[#202020]/10 to-[#ffffff]/10  border-[#7F7F7F] border-[0.5px] rounded-[40px] xl:space-y-4 ">
-              <div className=" p-2 text-white xl:space-y-8 flex flex-col items-center w-full bg-white/5 h-full justify-around  ">
-                <img src={Logo} alt="logo" className="w-10 mx-auto mb-4" />
+            <div className="md:w-full lg:max-w-[450px] lg:min-w-[450px] xl:max-w-[600px] xl:min-w-[600px] 2xl:min-w-[1000px] bg-gradient-to-br from-[#202020]/10 to-[#ffffff]/10  border-[#7F7F7F] border-[0.5px] rounded-[50px] xl:space-y-4 ">
+              <div className=" relative p-2 text-white xl:space-y-8 flex flex-col items-center w-full bg-white/5 h-full rounded-[50px] justify-around  ">
+                {isGreeting||(
+              <div>
+                <img src={Logo} alt="logo" className="absolute top-4 left-8 w-4 " />
+              </div>
+                )}
                 
                 {isGreeting && (
-                  <div className="text-center text-lg text-gray-300 mb-4">
-                    <p>Welcome! How can I help you today?</p>
+                  
+                  <div className="text-center text-lg text-white border h-full flex flex-col justify-end">
+                    <img src={Logo} alt="logo" className="w-10 mx-auto mb-4" />
+                    <p className="font-bold">Hello Karim!</p>
+                    <p>How can I help you today?</p>
                     <div className="flex flex-wrap gap-2 justify-center mt-4">
                       {suggestions.map((suggestion, index) => (
                         <button
@@ -94,7 +101,7 @@ const Chat = () => {
                         {msg.sender === "bot" && (
                           <img src="https://i.pravatar.cc/40?img=10" alt="Bot" className="w-8 h-8 rounded-full mr-2" />
                         )} 
-                        <div className={`p-1 rounded-lg max-w-[70%] break-words overflow-hidden ${msg.sender === "user" ? "bg-blue-500 text-white" : "bg-gray-700 text-white"}`}>
+                        <div className={`p-1 rounded-lg max-w-[70%] break-words overflow-hidden ${msg.sender === "user" ? "bg-white/15 text-white" : "bg-white/15 text-white"}`}>
                           {msg.text}
                         </div>
                         {msg.sender === "user" && (
@@ -102,15 +109,16 @@ const Chat = () => {
                         )}
                       </div>
                       {msg.sender === "bot" && (
-                        <div className="flex gap-2 mt-2 ml-12">
-                          <button className="text-white bg-blue-500 px-3 py-1 rounded-lg text-sm flex items-center gap-1 hover:bg-blue-600 transition" onClick={() => alert("Translate feature coming soon!")}> 
-                            <Languages size={16} /> Translate
+                        <div className="flex gap-2 mt-2 ml-16">
+                          <button className="text-white px-3  hover:cursor-pointer text-xs bg-white/15 py-1 rounded-full  flex items-center gap-1 transition" onClick={() => alert("Translate feature coming soon!")}> 
+                            <Languages size={16} /><h1 className="md:block hidden"> Translate</h1>
                           </button>
-                          <button className="text-white bg-gray-600 px-3 py-1 rounded-lg text-sm flex items-center gap-1 hover:bg-gray-700 transition" onClick={() => handleCopyText(msg.text)}> 
-                            <Copy size={16} /> Copy Text
+                          <button className="text-white hover:cursor-pointer text-xs bg-white/15 px-3 py-1 rounded-full  flex items-center gap-1  transition" onClick={() => handleCopyText(msg.text)}> 
+                            <Copy size={16} /><h1 className="md:block hidden"> Copy Text</h1>
                           </button>
-                          <button className="text-white bg-green-500 px-3 py-1 rounded-lg text-sm flex items-center gap-1 hover:bg-green-600 transition" onClick={() => alert("Learn More feature coming soon!")}> 
-                            <BookOpenText size={16} /> Learn More
+                          <button className="text-white hover:cursor-pointer text-xs bg-white/15  px-3 py-1 rounded-full  flex items-center gap-1  transition" onClick={() => alert("Learn More feature coming soon!")}> 
+                            <BookOpenText size={16} />
+                            <h1 className="md:block hidden">Learn More</h1> 
                           </button>
                         </div>
                       )}
@@ -124,8 +132,8 @@ const Chat = () => {
                     onChange={(e) => setMessage(e.target.value)}
                     onKeyDown={handleKeyPress}
                     placeholder="Ask a Question here..."
-                    rows={4}
-                    className="w-full min-h-[100px] max-h-[150px] bg-white/15 rounded-[24px] pl-4 pr-20 py-2 focus:outline-none resize-none overflow-auto break-words"
+                    rows={2}
+                    className="w-full min-h-[130px] max-h-[150px] bg-white/15 rounded-[24px] pl-4 pr-20 py-2 focus:outline-none resize-none overflow-auto break-words"
                   />
                   <button onClick={handleSendMessage} className="absolute right-4 bottom-2 p-2 hover:bg-white/15 rounded-full transition-colors">
                     <img src={send} className="w-10 h-10" alt="send" />

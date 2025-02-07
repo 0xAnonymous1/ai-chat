@@ -5,7 +5,7 @@ import videofile from './chat/videocal.mp4';
 
 const VideoCall = () => {
   return (
-    <div className="relative h-[400px] md:h-[550px] 2xl:h-[600px] w-[300px] mx-auto md:w-[400px] 2xl:w-[400px] fle rounded-[40px] overflow-hidden">
+    <div className="border border-[#7f7f7f] relative h-[400px] md:h-[550px] 2xl:h-[600px] w-[300px] mx-auto md:w-[400px] 2xl:w-[400px] fle rounded-[40px] overflow-hidden">
       {/* Video background */}
      
 
