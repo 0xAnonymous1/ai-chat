@@ -15,6 +15,15 @@ const Chat = () => {
   const textareaRef = useRef(null);
   const [isGreeting, setIsGreeting] = useState(true);
 
+  
+  const suggestions = [
+    "How can I improve my coding skills?",
+    "Tell me a fun fact!",
+    "What’s the weather like today?",
+    "Give me a motivational quote.",
+  ];
+
+
   useEffect(() => {
     if ("SpeechRecognition" in window || "webkitSpeechRecognition" in window) {
       recognitionRef.current = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
@@ -32,6 +41,7 @@ const Chat = () => {
     if (message.trim()) {
       setMessages([...messages, { text: message, sender: "user" }, { text: "Hello! How can I assist you today?", sender: "bot" }]);
       setMessage("");
+      setIsGreeting(false);
     }
   };
 
@@ -58,6 +68,25 @@ const Chat = () => {
               <div className=" p-2 text-white xl:space-y-8 flex flex-col items-center w-full bg-white/5 h-full justify-around  ">
                 <img src={Logo} alt="logo" className="w-10 mx-auto mb-4" />
                 
+                {isGreeting && (
+                  <div className="text-center text-lg text-gray-300 mb-4">
+                    <p>Welcome! How can I help you today?</p>
+                    <div className="flex flex-wrap gap-2 justify-center mt-4">
+                      {suggestions.map((suggestion, index) => (
+                        <button
+                          key={index}
+                          onClick={() => handleSendMessage(suggestion)}
+                          className="px-4 py-2 bg-gray-700 text-white rounded-lg text-sm hover:bg-gray-600 transition"
+                        >
+                          {suggestion}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+
+
                 <div className="w-full text-left overflow-y-auto max-h-72 2xl:max-w-[80] space-y-4">
                   {messages.map((msg, index) => (
                     <div key={index} className={`flex flex-col ${msg.sender === "user" ? "items-end" : "items-start"}`}>

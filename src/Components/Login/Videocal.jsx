@@ -12,15 +12,15 @@ const VideoCall = () => {
 <video src={videofile} />
       
       {/* Controls overlay */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex items-center gap-6 bg-black/15 backdrop-blur-3xl px-8 py-4 rounded-[30px]">
+      <div className="absolute bottom-6 left-6 flex justify-center gap-4  bg-black/15 backdrop-blur-3xl px-8 py-4 rounded-[30px]">
       
-          <img src='https://img.freepik.com/free-psd/3d-render-young-businesswoman-with-long-brown-hair-wearing-light-blue-blazer-white-shirt-she-looks-friendly-approachable-perfect-avatar-professional-woman_632498-32059.jpg' className="w-6 h-6 text-white" />
+          <img src='https://img.freepik.com/free-psd/3d-render-young-businesswoman-with-long-brown-hair-wearing-light-blue-blazer-white-shirt-she-looks-friendly-approachable-perfect-avatar-professional-woman_632498-32059.jpg' className="w-16 hover:cursor-pointer rounded-full " />
        
         
-        <img src={mic}  alt="mic" className='w-10 border ' />
+        <img src={mic}  alt="mic" className='w-16  rounded-full hover:cursor-pointer ' />
         
        
-          <img src={endcall} alt='endcall' className='w-5 border p-4' />
+          <img src={endcall} alt='endcall' className='w-16 rounded-full hover:cursor-pointer' />
   
       </div>
     </div>
