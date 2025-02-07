@@ -8,7 +8,7 @@ const Navbar = () => {
       <img src={Logo} alt="logo" className="w-[50px] h-[60px]" />
       <div className="flex gap-2  rounded-full">
       <Language/>
-      <button className="bg-red-500 rounded-full w-32 text-white  tracking-wide text-lg">Sign Out</button>
+      <button className="bg-[#AD1519] rounded-full w-32 text-white  tracking-wide text-lg">Sign Out</button>
       </div>
     </div>
   );
