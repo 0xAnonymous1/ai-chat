@@ -50,7 +50,7 @@ const Hero = () => {
               </p>
             </div>
           <div className="flex justify-center xl:justify-start" >
-            <Link > <button  data-aos="fade-right"  className="min-w-fit w-full hover:bg-white/8  rounded-full bg-white/15  p-2 py px-6 hover:cursor-pointer font-medium md:text-lg  text-white flex items-center gap-2">
+            <Link > <button  data-aos="fade-right"  className="min-w-fit w-full hover:bg-white/8  rounded-full bg-white/15 text-[14px]  p-2 py px-10 hover:cursor-pointer font-medium md:text-[22px] text-white flex items-center gap-2">
               <span>
                 <img src={google} alt="" className="w-10" />
               </span>{" "}

@@ -5,3 +5,8 @@
 .your-div::-webkit-scrollbar {
   display: none;
 }
+
+.body {
+  font-family: "Figtree", serif;
+ 
+}
