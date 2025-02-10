@@ -12,7 +12,7 @@ const Hero = () => {
 
     <div className="">
     <div className='bgimg h-[150vh]   lg:h-auto md:min-h-screen p-6    bg-no-repeat bg-cover items-start  flex lg:items-center md:py-6 '>
-      <div className=" w-full  md:w-[95%] rounded-xl shadow-lg lg:w-[90%] xl:w-[75%] 2xl:w-[70%]  mx-auto pb-[32px] pt-[26px] p-8 md:rounded-[50px] border-[0.2px] border-[#7f7f7f]  backdrop-blur-[8px] ">
+      <div className=" w-full  md:w-[95%]  rounded-xl shadow-lg lg:w-[90%] xl:w-[75%] 2xl:max-w-[1400px]    mx-auto pb-[32px] pt-[26px] p-4 md:rounded-[50px] border-[0.2px] border-[#7f7f7f]  backdrop-blur-[8px] ">
         <div className="flex justify-between px-0  lg:px-  items-center">
           <img data-aos="fade-right" src={Logo} alt="" className="w-12" />
           <div >
