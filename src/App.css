@@ -1,3 +1,7 @@
 .bg{
   background: url('./Components/Hero/images/bgImg.svg') ;
 }
+
+.your-div::-webkit-scrollbar {
+  display: none;
+}
